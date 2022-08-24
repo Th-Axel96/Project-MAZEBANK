@@ -19,5 +19,11 @@ import "./assets/css/styles.css";
 
 // document.body.appendChild(component());
 
+const sum = (value1, value2) => {
+  return value1 + value2;
+};
+console.log(sum(1, 2));
 
-console.log("Hello JS");
+let results = document.getElementById("solde");
+let sumResults = sum(1, 2);
+results.innerHTML = ` = ${sumResults}`;

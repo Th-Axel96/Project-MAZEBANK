@@ -7,5 +7,66 @@
     <title>Document</title>
     <link href="/output.css" rel="stylesheet" />
   <script defer src="/assets/runtime.bundle.js"></script><script defer src="/assets/main.bundle.js"></script></head>
-  <body class="bg-purple"></body>
+  <body class="bg-blue-200">
+    <h1 class="flex justify-center pb-20 text-4xl pt-2">
+      Bienvenue chez MAZEBANK
+    </h1>
+
+    <!-- Table ID compte -->
+    <div class="flex justify-center">
+      <table class="border border-black">
+        <tr class="border border-black">
+          <th class="p-2">Numéro de compte</th>
+          <td class="flex justify-center p-2">12345678901</td>
+        </tr>
+        <tr class="border border-black">
+          <th class="p-2">IBAN</th>
+          <td class="p-2">FR7630001007941234567890185</td>
+        </tr>
+        <tr class="border border-black">
+          <th class="p-2">Code banque</th>
+          <td class="flex justify-center p-2">30001</td>
+        </tr>
+        <tr class="border border-black">
+          <th class="p-2">Code guichet</th>
+          <td class="flex justify-center p-2">00794</td>
+        </tr>
+
+        <tr>
+          <th class="p-2">Clé du RIB</th>
+          <td class="flex justify-center p-2">85</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Table done -->
+
+    <!-- Result solde-->
+    <p class="flex justify-center py-10">
+      Votre solde est de <span id="solde"></span> €
+    </p>
+
+    <!-- Label, input for depot & retirer -->
+
+    <div class="flex justify-center">
+      <label class="pr-4" for="depot">Déposez de l'argent</label>
+      <input id="value1" type="number" class="border border-black" />
+      <button
+        class="bg-white border border-black px-2"
+        type="button"
+        id="btn-depot"
+      >
+        Déposer
+      </button>
+
+      <label class="pl-10 pr-4" for="retirer">Retirer de l'argent</label>
+      <input type="number" class="border border-black" />
+      <button
+        class="bg-white border border-black px-2"
+        type="button"
+        id="btn-retirer"
+      >
+        Retirer
+      </button>
+    </div>
+  </body>
 </html>
