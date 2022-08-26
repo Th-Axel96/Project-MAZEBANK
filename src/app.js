@@ -1,4 +1,6 @@
+import "@fortawesome/fontawesome-free/js/all";
 import "./assets/css/styles.css";
+
 // import _ from "lodash";
 // import Icon from './assets/img/img-test-webpack.jpg';
 
@@ -18,6 +20,5 @@ import "./assets/css/styles.css";
 // }
 
 // document.body.appendChild(component());
-
 
 console.log("Hello JS");
