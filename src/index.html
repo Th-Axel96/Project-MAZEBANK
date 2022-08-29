@@ -7,34 +7,92 @@
     <title>Document</title>
     <link href="/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-blue-200">
-    <h1 class="flex justify-center pb-20 text-4xl pt-2">
-      Bienvenue chez MAZEBANK
-    </h1>
+  <body class="bg-blue-500">
+    <div class="grid grid-cols-4">
+      <!-- div du bouton dark-mode -->
+
+      <div class="flex justify-center items-center">
+        <button type="button" id="dark-mode">
+          <i class="fa-solid fa-cloud-moon fa-2xl pr-6"></i>
+        </button>
+
+        <button type="button" id="blue-mode">
+          <i class="fa-solid fa-sun fa-2xl"></i>
+        </button>
+      </div>
+
+      <!-- dark-mod done -->
+      <h1 class="flex justify-center text-4xl pt-2 col-span-2">
+        Bienvenue chez MAZEBANK
+      </h1>
+    </div>
+
+    <!-- try JS -->
+
+    <div class="grid pt-20">
+      <div>
+        <button
+          type="button"
+          id="btn-profil1"
+          class="border bg-white border-black"
+        >
+          Profil1
+        </button>
+        <input
+          type="text"
+          id="input-account"
+          placeholder="Votre numéro de compte"
+        />
+        <button type="button" id="btn-account">Valider</button>
+      </div>
+      <div>
+        <button
+          type="button"
+          id="btn-profil2"
+          class="border bg-white border-black"
+        >
+          Profil2
+        </button>
+      </div>
+    </div>
+    <h1 class="flex justify-center"><span id="welcome"></span></h1>
 
     <!-- Table ID compte -->
-    <div class="flex justify-center">
+    <div class="flex justify-center pt-20">
       <table class="border border-black">
         <tr class="border border-black">
           <th class="p-2">Numéro de compte</th>
-          <td class="flex justify-center p-2">12345678901</td>
+          <td class="flex justify-center p-2">
+            <span id="results-account">
+              <p id="random-account"></p>
+            </span>
+          </td>
         </tr>
         <tr class="border border-black">
           <th class="p-2">IBAN</th>
-          <td class="p-2">FR7630001007941234567890185</td>
+          <td class="p-2">
+            <span id="results-iban"></span>
+            <span id="random-iban"></span>
+          </td>
         </tr>
         <tr class="border border-black">
           <th class="p-2">Code banque</th>
-          <td class="flex justify-center p-2">30001</td>
+          <td class="flex justify-center p-2">
+            <span id="random-codebank"></span>
+          </td>
         </tr>
         <tr class="border border-black">
           <th class="p-2">Code guichet</th>
-          <td class="flex justify-center p-2">00794</td>
+          <td class="flex justify-center p-2">
+            <span id="random-codeguichet"></span>
+          </td>
         </tr>
 
         <tr>
           <th class="p-2">Clé du RIB</th>
-          <td class="flex justify-center p-2">85</td>
+          <td class="flex justify-center p-2">
+            <span id="random-keyrib"></span>
+          </td>
         </tr>
       </table>
     </div>
@@ -42,14 +100,19 @@
 
     <!-- Result solde-->
     <p class="flex justify-center py-10">
-      Votre solde est de <span id="solde"></span> €
+      Votre solde est de <span id="results-solde"></span> €
     </p>
 
     <!-- Label, input for depot & retirer -->
 
     <div class="flex justify-center">
       <label class="pr-4" for="depot">Déposez de l'argent</label>
-      <input id="value1" type="number" class="border border-black" />
+      <input
+        placeholder="Faire un dépôt"
+        id="input-depot"
+        type="text"
+        class="border border-black"
+      />
       <button
         class="bg-white border border-black px-2"
         type="button"
@@ -57,6 +120,8 @@
       >
         Déposer
       </button>
+
+      <!-- *********************************** -->
 
       <label class="pl-10 pr-4" for="retirer">Retirer de l'argent</label>
       <input type="number" class="border border-black" />
@@ -68,5 +133,23 @@
         Retirer
       </button>
     </div>
+
+    <!-- comments -->
+
+    <p id="dateheure"></p>
+    <p id="demo"></p>
   </body>
+
+  <form>
+    <label for="account-number">Numéro de compte :</label>
+    <input type="text" id="account-number" class="border-2 border-black" />
+    <button type="button" id="submit-user" class="border-2 border-black">
+      Envoyer
+    </button>
+  </form>
+  <div class="mt-10">
+    <h2>Les utilisateur</h2>
+    <p>Votre numéro de compte est : <span id="results-account2"></span></p>
+    <div id="root"></div>
+  </div>
 </html>
