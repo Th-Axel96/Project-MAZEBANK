@@ -53,14 +53,42 @@ afficherDate();
 
 // fonction add euro
 
-function myFunction() {
-  let inputDepot = document.getElementById("input-depot").value;
-  let resultsSolde = document.getElementById("results-solde");
-  resultsSolde.innerHTML = inputDepot;
-}
+let resultsSold = document.getElementById("results-sold");
+let inputDepot = document.getElementById("input-depot");
+let btnDepot = document.getElementById("btn-depot");
+let randomSold = getRandom(100, 999.99);
+let inputTrade = document.getElementById("input-trade");
+let btnTrade = document.getElementById("btn-trade");
 
-let BtnDepot = document.getElementById("btn-depot");
-BtnDepot.addEventListener("click", myFunction);
+resultsSold.innerHTML = randomSold;
+
+const calculate = () => {
+  let results = parseInt(inputDepot.value);
+  let total = (randomSold += results);
+  resultsSold.innerHTML = total;
+  return total;
+};
+btnDepot.addEventListener("click", calculate);
+
+// add calcul negatif
+
+const calculateNegatif = () => {
+  let results = parseInt(inputTrade.value);
+  let total = (randomSold -= results);
+  resultsSold.innerHTML = total;
+  return total;
+};
+
+btnTrade.addEventListener("click", calculateNegatif);
+
+// function myFunction() {
+//   let inputDepot = document.getElementById("input-depot").value;
+//   let resultsSolde = document.getElementById("results-solde");
+//   resultsSolde.innerHTML = inputDepot;
+// }
+
+// let BtnDepot = document.getElementById("btn-depot");
+// BtnDepot.addEventListener("click", myFunction);
 
 // ***********************************************************************
 
@@ -184,7 +212,7 @@ function addFormulaire() {
     `Bonjour ` + inputName.value + `, bienvenue sur votre espace personnelle.`;
 }
 
-// 
+//
 
 btnFormulaire.addEventListener("click", addFormulaire);
 

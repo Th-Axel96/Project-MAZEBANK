@@ -183,11 +183,13 @@
     <!-- Table done -->
 
     <!-- Result solde-->
-   <p class="text-center" id="results-name"></p>
+    <p class="text-center" id="results-name"></p>
 
-    <p class="flex justify-center py-10">
-      Votre solde est de <span id="results-solde"></span> €
-    </p>
+    <div>
+      <p class="flex justify-center py-10">
+        Votre solde est de <span id="results-sold"></span> €
+      </p>
+    </div>
 
     <!-- Label, input for depot & retirer -->
 
@@ -210,11 +212,11 @@
       <!-- *********************************** -->
 
       <label class="pl-10 pr-4" for="retirer">Retirer de l'argent</label>
-      <input type="number" class="border border-black" />
+      <input type="text" id="input-trade" class="border border-black" />
       <button
         class="bg-white border border-black px-2"
         type="button"
-        id="btn-retirer"
+        id="btn-trade"
       >
         Retirer
       </button>
@@ -238,12 +240,5 @@
     <p>Votre numéro de compte est : <span id="results-account2"></span></p>
     
   </div> -->
-
-
-  
-
-
-
-
   </body>
 </html>
