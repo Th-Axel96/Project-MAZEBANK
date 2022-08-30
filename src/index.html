@@ -29,73 +29,121 @@
 
     <!-- try JS -->
 
-    <div class="grid pt-20">
-      <div>
-        <button
-          type="button"
-          id="btn-profil1"
-          class="border bg-white border-black"
-        >
-          Profil1
-        </button>
+    <!-- profil -->
+    <button type="button" id="btn-profil1" class="border bg-white border-black">
+      Profil1
+    </button>
+    <button type="button" id="btn-profil2" class="border bg-white border-black">
+      Profil2
+    </button>
+
+    <h1 class="flex justify-center"><span id="welcome"></span></h1>
+
+    <!--**************** formulaire ************ -->
+
+    <!-- input / btn account -->
+
+    <div class="grid grid-cols-3">
+      <div class="pt-20 text-center">
         <input
           type="text"
           id="input-account"
-          placeholder="Votre numéro de compte"
+          placeholder="Votre Numéro de compte"
         />
-        <button type="button" id="btn-account">Valider</button>
+
+        <!-- input / btn IBAN -->
+        <div class="pt-5 text-center">
+          <input
+            class="text-center"
+            type="text"
+            id="input-iban"
+            placeholder="Votre IBAN"
+          />
+        </div>
+
+        <!-- input / btn codebank -->
+        <div class="pt-5 text-center">
+          <input
+            class="text-center"
+            type="text"
+            id="input-account"
+            placeholder="Votre Code banque"
+          />
+        </div>
+        <!-- input / btn codeguichet -->
+
+        <div class="pt-5 text-center">
+          <input
+            class="text-center"
+            type="text"
+            id="input-account"
+            placeholder="Votre Code guichet"
+          />
+        </div>
+
+        <!-- input / btn Keyrib -->
+        <div class="pt-5 text-center">
+          <input
+            class="text-center"
+            type="text"
+            id="input-account"
+            placeholder="Votre clé RIB"
+          />
+        </div>
+        <div class="text-center">
+          <button
+            type="button"
+            class="border-2 border-black"
+            id="btn-formulaire"
+          >
+            Valider
+          </button>
+        </div>
       </div>
-      <div>
-        <button
-          type="button"
-          id="btn-profil2"
-          class="border bg-white border-black"
-        >
-          Profil2
-        </button>
+
+      <!-- Table ID compte -->
+
+      <div class="flex justify-center pt-20">
+        <table class="border border-black">
+          <tr class="border border-black">
+            <th class="p-2">Numéro de compte</th>
+            <td class="flex justify-center p-2">
+              <span id="results-account">
+                <span id="results-accountprofil">
+                  <p class="opacity-50" id="random-account"></p> </span
+              ></span>
+            </td>
+          </tr>
+          <tr class="border border-black">
+            <th class="p-2">IBAN</th>
+            <td class="p-2">
+              <span id="results-iban"></span>
+              <span class="opacity-50" id="random-iban"></span>
+            </td>
+          </tr>
+          <tr class="border border-black">
+            <th class="p-2">Code banque</th>
+            <td class="flex justify-center p-2">
+              <span id="random-codebank"></span>
+            </td>
+          </tr>
+          <tr class="border border-black">
+            <th class="p-2">Code guichet</th>
+            <td class="flex justify-center p-2">
+              <span id="random-codeguichet"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="p-2">Clé du RIB</th>
+            <td class="flex justify-center p-2">
+              <span id="random-keyrib"></span>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
-    <h1 class="flex justify-center"><span id="welcome"></span></h1>
 
-    <!-- Table ID compte -->
-    <div class="flex justify-center pt-20">
-      <table class="border border-black">
-        <tr class="border border-black">
-          <th class="p-2">Numéro de compte</th>
-          <td class="flex justify-center p-2">
-            <span id="results-account">
-              <p id="random-account"></p>
-            </span>
-          </td>
-        </tr>
-        <tr class="border border-black">
-          <th class="p-2">IBAN</th>
-          <td class="p-2">
-            <span id="results-iban"></span>
-            <span id="random-iban"></span>
-          </td>
-        </tr>
-        <tr class="border border-black">
-          <th class="p-2">Code banque</th>
-          <td class="flex justify-center p-2">
-            <span id="random-codebank"></span>
-          </td>
-        </tr>
-        <tr class="border border-black">
-          <th class="p-2">Code guichet</th>
-          <td class="flex justify-center p-2">
-            <span id="random-codeguichet"></span>
-          </td>
-        </tr>
-
-        <tr>
-          <th class="p-2">Clé du RIB</th>
-          <td class="flex justify-center p-2">
-            <span id="random-keyrib"></span>
-          </td>
-        </tr>
-      </table>
-    </div>
     <!-- Table done -->
 
     <!-- Result solde-->

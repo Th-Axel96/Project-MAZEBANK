@@ -19,18 +19,6 @@ randomCodebank.innerHTML = getRandom(10000, 99999);
 randomCodeguichet.innerHTML = getRandom(1, 999999);
 randomKeyrib.innerHTML = getRandom(10, 99);
 
-// function getRndInteger2(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
-// randomIban.innerHTML = getRndInteger2(0, 7630000100000000);
-
-// let btn1 = document.getElementById("btn1");
-
-// btn1.addEventListener("click", () => {
-//   random1.classList.toggle("random1");
-// });
-
 function pause(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -137,20 +125,20 @@ let user2 = new UserAccount(
 
 // ************   Profil ***************
 
-let resultsAccount = document.getElementById("results-account");
+let resultsAccountProfil = document.getElementById("results-accountprofil");
 let btnProfil1 = document.getElementById("btn-profil1");
 let btnProfil2 = document.getElementById("btn-profil2");
 let welcome = document.getElementById("welcome");
 
 function addUser1() {
-  resultsAccount.innerHTML = user1.numberAccount;
+  resultsAccountProfil.innerHTML = user1.numberAccount;
   welcome.innerHTML = user1.name;
 }
 
 btnProfil1.addEventListener("click", addUser1);
 
 function addUser2() {
-  resultsAccount.innerHTML = user2.numberAccount;
+  resultsAccountProfil.innerHTML = user2.numberAccount;
   welcome.innerHTML = user2.name;
 }
 
@@ -165,15 +153,31 @@ btnProfil2.addEventListener("click", addUser2);
 // }
 
 // document.getElementById("btn-depot").addEventListener("click", myFunction);
+      
+// ***************************************************************
+// ***************** input & btn Formulaire **********************
+// ***************************************************************
 
-let btnAccount = document.getElementById("btn-account");
+// account formulaire
+let btnFormulaire = document.getElementById("btn-formulaire");
+let resultsAccount = document.getElementById("results-account");
+let resultsIban = document.getElementById("results-iban")
 
-function addAccount() {
+function addFormulaire() {
   let inputAccount = document.getElementById("input-account").value;
+  let inputIban = document.getElementById("input-iban").value;
+  resultsIban.innerHTML = inputIban;
   resultsAccount.innerHTML = inputAccount;
 }
 
-btnAccount.addEventListener("click", addAccount);
+btnFormulaire.addEventListener("click", addFormulaire);
+
+//  Iban formulaire 
+
+
+function addIban() {
+}
+
 
 // ******* importer notre class creer dans user.js
 
