@@ -9,9 +9,26 @@
   </head>
   <body class="bg-blue-500">
     <div class="grid grid-cols-4">
-      <!-- div du bouton dark-mode -->
+      <!-- profil -->
 
       <div class="flex justify-center items-center">
+        <div>
+          <button
+            type="button"
+            id="btn-profil1"
+            class="border bg-white border-black"
+          >
+            Profil1
+          </button>
+          <button
+            type="button"
+            id="btn-profil2"
+            class="border bg-white border-black"
+          >
+            Profil2
+          </button>
+        </div>
+        <!--bouton dark-mode -->
         <button type="button" id="dark-mode">
           <i class="fa-solid fa-cloud-moon fa-2xl pr-6"></i>
         </button>
@@ -25,34 +42,43 @@
       <h1 class="flex justify-center text-4xl pt-2 col-span-2">
         Bienvenue chez MAZEBANK
       </h1>
+      <div class="flex justify-center items-center text-xl">
+        <p id="dateheure"></p>
+      </div>
     </div>
 
     <!-- try JS -->
-
-    <!-- profil -->
-    <button type="button" id="btn-profil1" class="border bg-white border-black">
-      Profil1
-    </button>
-    <button type="button" id="btn-profil2" class="border bg-white border-black">
-      Profil2
-    </button>
 
     <h1 class="flex justify-center"><span id="welcome"></span></h1>
 
     <!--**************** formulaire ************ -->
 
-    <!-- input / btn account -->
-
     <div class="grid grid-cols-3">
       <div class="pt-20 text-center">
-        <input
-          type="text"
-          id="input-account"
-          placeholder="Votre Numéro de compte"
-        />
+        <h1 class="text-2xl pb-5">Veuillez saisir vos données :</h1>
+        <!-- input name -->
 
-        <!-- input / btn IBAN -->
-        <div class="pt-5 text-center">
+        <div>
+          <input
+            class="text-center"
+            type="text"
+            id="input-name"
+            placeholder="Votre Nom"
+          />
+        </div>
+
+        <!-- input account -->
+        <div class="pt-5">
+          <input
+            class="text-center"
+            type="text"
+            id="input-account"
+            placeholder="Votre Numéro de compte"
+          />
+        </div>
+
+        <!-- input  IBAN -->
+        <div class="pt-5">
           <input
             class="text-center"
             type="text"
@@ -61,36 +87,36 @@
           />
         </div>
 
-        <!-- input / btn codebank -->
-        <div class="pt-5 text-center">
+        <!-- input  codebank -->
+        <div class="pt-5">
           <input
             class="text-center"
             type="text"
-            id="input-account"
+            id="input-codebank"
             placeholder="Votre Code banque"
           />
         </div>
-        <!-- input / btn codeguichet -->
+        <!-- input  codeguichet -->
 
-        <div class="pt-5 text-center">
+        <div class="pt-5">
           <input
             class="text-center"
             type="text"
-            id="input-account"
+            id="input-codeguichet"
             placeholder="Votre Code guichet"
           />
         </div>
 
         <!-- input / btn Keyrib -->
-        <div class="pt-5 text-center">
+        <div class="pt-5">
           <input
             class="text-center"
             type="text"
-            id="input-account"
+            id="input-keyrib"
             placeholder="Votre clé RIB"
           />
         </div>
-        <div class="text-center">
+        <div class="pt-2">
           <button
             type="button"
             class="border-2 border-black"
@@ -98,12 +124,15 @@
           >
             Valider
           </button>
+          <button type="button" class="border-2 border-black" id="btn-refresh">
+            Refresh
+          </button>
         </div>
       </div>
 
       <!-- Table ID compte -->
 
-      <div class="flex justify-center pt-20">
+      <div class="flex justify-center items-center pt-20">
         <table class="border border-black">
           <tr class="border border-black">
             <th class="p-2">Numéro de compte</th>
@@ -117,27 +146,34 @@
           <tr class="border border-black">
             <th class="p-2">IBAN</th>
             <td class="p-2">
-              <span id="results-iban"></span>
-              <span class="opacity-50" id="random-iban"></span>
+              <span id="results-iban">
+                <span class="opacity-50" id="random-iban"></span
+              ></span>
             </td>
           </tr>
           <tr class="border border-black">
             <th class="p-2">Code banque</th>
             <td class="flex justify-center p-2">
-              <span id="random-codebank"></span>
+              <span id="results-codebank">
+                <span class="opacity-50" id="random-codebank"></span
+              ></span>
             </td>
           </tr>
           <tr class="border border-black">
             <th class="p-2">Code guichet</th>
             <td class="flex justify-center p-2">
-              <span id="random-codeguichet"></span>
+              <span id="results-codeguichet">
+                <span class="opacity-50" id="random-codeguichet"></span
+              ></span>
             </td>
           </tr>
 
           <tr>
             <th class="p-2">Clé du RIB</th>
             <td class="flex justify-center p-2">
-              <span id="random-keyrib"></span>
+              <span id="results-keyrib">
+                <span class="opacity-50" id="random-keyrib"></span
+              ></span>
             </td>
           </tr>
         </table>
@@ -147,6 +183,8 @@
     <!-- Table done -->
 
     <!-- Result solde-->
+   <p class="text-center" id="results-name"></p>
+
     <p class="flex justify-center py-10">
       Votre solde est de <span id="results-solde"></span> €
     </p>
@@ -181,12 +219,12 @@
         Retirer
       </button>
     </div>
+    <div id="root"></div>
 
     <!-- comments -->
 
-    <p id="dateheure"></p>
-    <p id="demo"></p>
-  </body>
+    <!-- <p id="demo"></p>
+  
 
   <form>
     <label for="account-number">Numéro de compte :</label>
@@ -198,6 +236,14 @@
   <div class="mt-10">
     <h2>Les utilisateur</h2>
     <p>Votre numéro de compte est : <span id="results-account2"></span></p>
-    <div id="root"></div>
-  </div>
+    
+  </div> -->
+
+
+  
+
+
+
+
+  </body>
 </html>
