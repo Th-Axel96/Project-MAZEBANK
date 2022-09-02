@@ -190,6 +190,7 @@
         Votre solde est de <span id="results-sold"></span> €
       </p>
     </div>
+    <p id="test"></p>
 
     <!-- Label, input for depot & retirer -->
 
@@ -199,7 +200,7 @@
         placeholder="Faire un dépôt"
         id="input-depot"
         type="text"
-        class="border border-black"
+        class="border border-black text-center"
       />
       <button
         class="bg-white border border-black px-2"
@@ -223,22 +224,25 @@
     </div>
     <div id="root"></div>
 
-    <!-- comments -->
+    <!-- *************** try menu hamburger ************** -->
 
-    <!-- <p id="demo"></p>
-  
-
-  <form>
-    <label for="account-number">Numéro de compte :</label>
-    <input type="text" id="account-number" class="border-2 border-black" />
-    <button type="button" id="submit-user" class="border-2 border-black">
-      Envoyer
+    <button
+      class="text-4xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+      id="logo"
+    >
+      <i class="fas fa-bars"></i>
     </button>
-  </form>
-  <div class="mt-10">
-    <h2>Les utilisateur</h2>
-    <p>Votre numéro de compte est : <span id="results-account2"></span></p>
-    
-  </div> -->
+
+    <ul
+      id="menu"
+      class="bg-red-500 w-40 h-80 flex flex-col justify-around items-center"
+    >
+      <li class="border-b-4 pb-2 "><a href="#">Home</a></li>
+
+      <li class="border-b-4 pb-2"><a href="#">Contact</a></li>
+      <li class="border-b-4 pb-2"><a href="#">Streaming</a></li>
+      <li class="border-b-4 pb-2"><a href="#">Boutique</a></li>
+    </ul>
+    <div class="rounded-full w-40 h-40 bg-green-600"></div>
   </body>
 </html>

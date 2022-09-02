@@ -10,7 +10,7 @@ let randomCodeguichet = document.getElementById("random-codeguichet");
 let randomKeyrib = document.getElementById("random-keyrib");
 
 function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min));
 }
 
 randomAcccount.innerHTML = getRandom(12345678901, 99999999999);
@@ -56,39 +56,52 @@ afficherDate();
 let resultsSold = document.getElementById("results-sold");
 let inputDepot = document.getElementById("input-depot");
 let btnDepot = document.getElementById("btn-depot");
-let randomSold = getRandom(100, 999.99);
 let inputTrade = document.getElementById("input-trade");
 let btnTrade = document.getElementById("btn-trade");
 
+let randomSold = getRandom(-100, 1000);
+// console.log(typeof randomSold);
 resultsSold.innerHTML = randomSold;
 
+const body = document.querySelector("body");
+
 const calculate = () => {
-  let results = parseInt(inputDepot.value);
-  let total = (randomSold += results);
-  resultsSold.innerHTML = total;
-  return total;
+  if (randomSold < 1) {
+    let results = parseInt(inputDepot.value);
+    let total = (randomSold += results);
+    resultsSold.innerHTML = total;
+    return total;
+  } else randomSold > 1;
+  {
+    body.classList.add("bg-blue-500");
+    body.classList.remove("bg-red-500");
+    let results = parseInt(inputDepot.value);
+    let total = (randomSold += results);
+    resultsSold.innerHTML = total;
+    return total;
+  }
 };
+
 btnDepot.addEventListener("click", calculate);
 
-// add calcul negatif
+// add calcul negative
 
 const calculateNegatif = () => {
-  let results = parseInt(inputTrade.value);
-  let total = (randomSold -= results);
-  resultsSold.innerHTML = total;
-  return total;
+  if (randomSold > 1) {
+    let results = parseInt(inputTrade.value);
+    let total = (randomSold -= results);
+    resultsSold.innerHTML = total;
+    return total;
+  } else randomSold < 1;
+  {
+    body.classList.remove("bg-blue-500");
+    body.classList.add("bg-red-500");
+  }
 };
+// let soldee =-10;
+// soldee <= 100 ? console.log("true") : console.log("false");
 
 btnTrade.addEventListener("click", calculateNegatif);
-
-// function myFunction() {
-//   let inputDepot = document.getElementById("input-depot").value;
-//   let resultsSolde = document.getElementById("results-solde");
-//   resultsSolde.innerHTML = inputDepot;
-// }
-
-// let BtnDepot = document.getElementById("btn-depot");
-// BtnDepot.addEventListener("click", myFunction);
 
 // ***********************************************************************
 
@@ -252,3 +265,44 @@ btnResfresh.addEventListener("click", refreshFormulaire);
 // const root = document.getElementById("root");
 // root.append(input1);
 // root.append(input2, btn);
+
+// **********************************************************
+// **************** try humburger menu **********************
+// **********************************************************
+
+let logo = document.getElementById("logo");
+let menu = document.getElementById("menu");
+
+logo.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  menu.classList.toggle("block");
+  logo.classList.toggle("text-green-400");
+});
+
+// ****************** MENU exo BURGER ********************
+
+// const menuMobile = document.getElementById("menu-mobile");
+// const navMobile = document.getElementById("nav-mobile");
+// const root = document.getElementById("root");
+
+// // ? = if
+
+// const Menu = () => {
+//   const showMenu = () => {
+//     navMobile.classList.toggle("hidden");
+//   };
+//   const closeMenu = () => {
+//     navMobile.classList.contains("hidden")
+//       ? console.log("true")
+//       : navMobile.classList.add("hidden");
+//   };
+
+//   menuMobile.addEventListener("click", showMenu);
+
+//   root.addEventListener("click", closeMenu);
+// };
+
+// export default + nom de la variable
+// import Menu
+
+// export default Menu;
