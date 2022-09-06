@@ -59,8 +59,9 @@ let btnDepot = document.getElementById("btn-depot");
 let inputTrade = document.getElementById("input-trade");
 let btnTrade = document.getElementById("btn-trade");
 
-let randomSold = getRandom(-100, 1000);
 // console.log(typeof randomSold);
+let randomSold = getRandom(-100, 1000);
+
 resultsSold.innerHTML = randomSold;
 
 const body = document.querySelector("body");
@@ -91,6 +92,7 @@ const calculateNegatif = () => {
     let results = parseInt(inputTrade.value);
     let total = (randomSold -= results);
     resultsSold.innerHTML = total;
+    Math.max(-100);
     return total;
   } else randomSold < 1;
   {
