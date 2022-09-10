@@ -7,42 +7,34 @@
     <title>Document</title>
     <link href="/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-blue-500">
-    <div class="grid grid-cols-4">
+  <body class="bg-green-200">
+    <div class="grid grid-cols-5">
+      <div>
+        <button
+          class="text-4xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+          id="logo"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul
+          id="menu"
+          class="bg-yellow-200 w-40 h-80 flex flex-col justify-around items-center hidden"
+        >
+          <li class="border-b-4 pb-2"><a href="#">Home</a></li>
+
+          <li class="border-b-4 pb-2"><a href="#">Contact</a></li>
+          <li class="border-b-4 pb-2"><a href="#">Streaming</a></li>
+          <li class="border-b-4 pb-2"><a href="#">Boutique</a></li>
+        </ul>
+      </div>
       <!-- profil -->
 
-      <div class="flex justify-center items-center">
-        <div>
-          <button
-            type="button"
-            id="btn-profil1"
-            class="border bg-white border-black"
-          >
-            Profil1
-          </button>
-          <button
-            type="button"
-            id="btn-profil2"
-            class="border bg-white border-black"
-          >
-            Profil2
-          </button>
-        </div>
-        <!--bouton dark-mode -->
-        <button type="button" id="dark-mode">
-          <i class="fa-solid fa-cloud-moon fa-2xl pr-6"></i>
-        </button>
-
-        <button type="button" id="blue-mode">
-          <i class="fa-solid fa-sun fa-2xl"></i>
-        </button>
-      </div>
-
-      <!-- dark-mod done -->
-      <h1 class="flex justify-center text-4xl pt-2 col-span-2">
+     
+      <h1 class="flex justify-center text-4xl pt-2 col-start-3">
         Bienvenue chez MAZEBANK
       </h1>
-      <div class="flex justify-center items-center text-xl">
+      <div class="flex justify-center text-xl">
         <p id="dateheure"></p>
       </div>
     </div>
@@ -224,25 +216,26 @@
     </div>
     <div id="root"></div>
 
-    <!-- *************** try menu hamburger ************** -->
 
-    <button
-      class="text-4xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
-      id="logo"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
+    <!-- Virement -->
 
-    <ul
-      id="menu"
-      class="bg-red-500 w-40 h-80 flex flex-col justify-around items-center"
-    >
-      <li class="border-b-4 pb-2 "><a href="#">Home</a></li>
+    <label for="virement">Virement</label>
+    <input type="text" id="input-virement" class="border border-black">
+     <button
+        class="bg-white border border-black px-2"
+        type="button"
+        id="btn-virement"
+      >
+       virer
+      </button>
+      <span id="results-virement"></span>
 
-      <li class="border-b-4 pb-2"><a href="#">Contact</a></li>
-      <li class="border-b-4 pb-2"><a href="#">Streaming</a></li>
-      <li class="border-b-4 pb-2"><a href="#">Boutique</a></li>
-    </ul>
-    <!-- <div class="rounded-full w-40 h-40 bg-green-600"></div> -->
+
   </body>
 </html>
+
+
+
+
+
+

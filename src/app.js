@@ -53,7 +53,7 @@ afficherDate();
 
 // fonction add euro
 
-let resultsSold = document.getElementById("results-sold");
+const resultsSold = document.getElementById("results-sold");
 let inputDepot = document.getElementById("input-depot");
 let btnDepot = document.getElementById("btn-depot");
 let inputTrade = document.getElementById("input-trade");
@@ -74,7 +74,7 @@ const calculate = () => {
     return total;
   } else randomSold > 1;
   {
-    body.classList.add("bg-blue-500");
+    body.classList.add("bg-green-200");
     body.classList.remove("bg-red-500");
     let results = parseInt(inputDepot.value);
     let total = (randomSold += results);
@@ -96,7 +96,7 @@ const calculateNegatif = () => {
     return total;
   } else randomSold < 1;
   {
-    body.classList.remove("bg-blue-500");
+    body.classList.remove("bg-green-200");
     body.classList.add("bg-red-500");
   }
 };
@@ -137,34 +137,7 @@ btnTrade.addEventListener("click", calculateNegatif);
 
 // resultsIban.append(safwan.iban);
 
-class UserAccount {
-  constructor(name, numberAccount, iban, codeBank, codeGuichet, keyRib) {
-    this.name = name;
-    this.numberAccount = numberAccount;
-    this.iban = iban;
-    this.codeBank = codeBank;
-    this.codeGuichet = codeGuichet;
-    this.keyRib = keyRib;
-  }
-}
 
-let user1 = new UserAccount(
-  "Bonjour Edouard",
-  12345678901,
-  "FR7630001007941234567890185",
-  30001,
-  "00794",
-  85
-);
-
-let user2 = new UserAccount(
-  "Bonjour Philipe",
-  1239999999,
-  "FR999999999999999",
-  30001,
-  "00794",
-  85
-);
 
 // ************   Profil ***************
 
@@ -308,3 +281,22 @@ logo.addEventListener("click", () => {
 // import Menu
 
 // export default Menu;
+
+// ********* virement ***********
+
+const inputVirement = document.getElementById("input-virement");
+const btnVirement = document.getElementById("btn-virement");
+const resultsVirement = document.getElementById("results-virement");
+
+let soldVirement = 0;
+
+const calculateVirement = () => {
+  let resultsInputVirement = parseInt(inputVirement.value);
+  let total = (soldVirement += resultsInputVirement);
+  resultsVirement.innerHTML = total;
+  let total2 = (randomSold -= resultsInputVirement);
+  resultsSold.innerHTML = total2;
+  return total2
+};
+
+btnVirement.addEventListener("click", calculateVirement);
