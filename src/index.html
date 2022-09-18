@@ -7,8 +7,8 @@
     <title>Document</title>
     <link href="/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-green-200">
-    <div class="grid grid-cols-5">
+  <body class="bg-yellow-100">
+    <div class="grid grid-cols-5 pt-4">
       <div>
         <button
           class="text-4xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
@@ -29,13 +29,13 @@
         </ul>
       </div>
       <!-- profil -->
-
-     
-      <h1 class="flex justify-center text-4xl pt-2 col-start-3">
-        Bienvenue chez MAZEBANK
-      </h1>
+      <div class="flex justify-center text-4xl pt-2 col-span-3">
+        <h1 class="bg-yellow-400 shadow-lg shadow-black">
+          Bienvenue chez MAZEBANK
+        </h1>
+      </div>
       <div class="flex justify-center text-xl">
-        <p id="dateheure"></p>
+        <p id="day-date"></p>
       </div>
     </div>
 
@@ -116,16 +116,13 @@
           >
             Valider
           </button>
-          <button type="button" class="border-2 border-black" id="btn-refresh">
-            Refresh
-          </button>
         </div>
       </div>
 
       <!-- Table ID compte -->
 
       <div class="flex justify-center items-center pt-20">
-        <table class="border border-black">
+        <table class="border border-black shadow-lg shadow-black">
           <tr class="border border-black">
             <th class="p-2">Numéro de compte</th>
             <td class="flex justify-center p-2">
@@ -171,27 +168,38 @@
         </table>
       </div>
     </div>
+    <div class="text-center pb-8">
+      <button type="button" class="border-2 border-black" id="btn-refresh">
+        Refresh
+      </button>
+    </div>
 
     <!-- Table done -->
 
     <!-- Result solde-->
     <p class="text-center" id="results-name"></p>
 
-    <div>
-      <p class="flex justify-center py-10">
-        Votre solde est de <span id="results-sold"></span> €
+    <div class="text-center py-6">
+      <span id="warning-icon" class="hidden pb-4"
+        ><i class="fa-solid fa-circle-exclamation text-6xl text-red-500"></i
+      ></span>
+      <span class="bg-yellow-400 font-bold text-xl" id="decouvert"></span>
+    </div>
+
+    <div class="flex justify-center py-10">
+      <p class="bg-yellow-400 text-xl">
+        Votre solde est de <span class="font-bold" id="results-sold"></span> €
       </p>
     </div>
-    <p id="test"></p>
 
     <!-- Label, input for depot & retirer -->
 
     <div class="flex justify-center">
       <label class="pr-4" for="depot">Déposez de l'argent</label>
       <input
-        placeholder="Faire un dépôt"
         id="input-depot"
         type="text"
+        placeholder="Faire un dépôt"
         class="border border-black text-center"
       />
       <button
@@ -205,7 +213,13 @@
       <!-- *********************************** -->
 
       <label class="pl-10 pr-4" for="retirer">Retirer de l'argent</label>
-      <input type="text" id="input-trade" class="border border-black" />
+      <input
+        type="text"
+        maxlength="3"
+        id="input-trade"
+        class="border border-black text-center"
+        placeholder="Retirer votre argent"
+      />
       <button
         class="bg-white border border-black px-2"
         type="button"
@@ -216,26 +230,29 @@
     </div>
     <div id="root"></div>
 
-
     <!-- Virement -->
-
-    <label for="virement">Virement</label>
-    <input type="text" id="input-virement" class="border border-black">
-     <button
+    <div class="flex justify-center pt-20">
+      <label for="virement" class="pr-4">Faire un virement</label>
+      <input
+        type="text"
+        maxlength="3"
+        id="input-virement"
+        class="border border-black text-center"
+        placeholder="Virement"
+      />
+      <button
         class="bg-white border border-black px-2"
         type="button"
         id="btn-virement"
       >
-       virer
+        virer
       </button>
-      <span id="results-virement"></span>
-
-
+    </div>
+    <div class="flex justify-center pt-8 text-xl">
+      <h1 class="bg-yellow-400">
+        Le solde de votre bénéficiaire est de
+        <span class="font-bold" id="results-virement"> </span> €
+      </h1>
+    </div>
   </body>
 </html>
-
-
-
-
-
-
