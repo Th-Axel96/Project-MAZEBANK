@@ -1,5 +1,5 @@
-let logo = document.getElementById("logo");
-let menu = document.getElementById("menu");
+// let logo = document.getElementById("logo");
+// let menu = document.getElementById("menu");
 
 // get the menu burger
 
