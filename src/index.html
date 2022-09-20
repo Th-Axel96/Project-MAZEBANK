@@ -167,6 +167,38 @@
           </tr>
         </table>
       </div>
+
+      <!-- get the add beneficiary! -->
+
+      <div class="flex items-center flex-col">
+        <h1 class="pt-20 text-2xl pb-10">Veuillez ajouter un bénéficiaire :</h1>
+        <div>
+          <input id="name-beneficiary"
+            type="text"
+            placeholder="Nom du bénéficiaire"
+            class="placeholder:text-center"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Numéro de compte"
+            class="placeholder:text-center my-10"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="solde"
+            class="placeholder:text-center mb-4"
+          />
+        </div>
+        <button id="btn-submit-beneficiary" class="border-2 border-black pt">
+          Validé
+        </button>
+      </div>
+
+      <!-- done the beneficiary -->
     </div>
     <div class="text-center pb-8">
       <button type="button" class="border-2 border-black" id="btn-refresh">
@@ -254,5 +286,19 @@
         <span class="font-bold" id="results-virement"> </span> €
       </h1>
     </div>
+
+    <!-- add beneficiaire -->
+    <!-- <div>
+    <label for="beneficiaire">Ajouté un bénéficiaire</label>
+    <input type="text" class="border-2 border-black" id="input-beneficiary" />
+    <button id="btn-beneficiary" class="border-2 border-black">Ajouté</button>
+</div>
+<div>
+    <select name="user" id="user-select">
+      <option selected>Choisir un bénéficiaire</option>
+      <option id="user-beneficiary" class="hidden"></option>
+    </select>
+</div>
+    <button type="button" id="btn-choose-user" class="border-2 border-black">Validé</button> -->
   </body>
 </html>

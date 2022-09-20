@@ -1,14 +1,10 @@
-class UserAccount {
-  constructor(name, numberAccount, iban, codeBank, codeGuichet, keyRib) {
+class addUserClass {
+  constructor(name, sold) {
     this.name = name;
-    this.numberAccount = numberAccount;
-    this.iban = iban;
-    this.codeBank = codeBank;
-    this.codeGuichet = codeGuichet;
-    this.keyRib = keyRib;
+    this.sold = sold;
   }
 }
 
-const newUser = () => {
-  let user1 = new UserAccount
-}
+
+
+export default addUserClass

@@ -95,6 +95,6 @@ const transfer = () => {
     warningIcon.classList.remove("hidden");
   }
 };
-resultsVirement.innerHTML = soldTransfer;
+// resultsVirement.innerHTML = soldTransfer;
 
 btnVirement.addEventListener("click", transfer);
