@@ -8,60 +8,13 @@ import { withDraw } from "./components/calculate";
 import { refreshFormulaire } from "./components/refreshForm";
 import { addFormulaire } from "./components/addForm";
 import addUserClass from "./components/classUser";
-
-// const inputBeneficiary = document.getElementById("input-beneficiary");
-// const btnBeneficiary = document.getElementById("btn-beneficiary");
-// const userBeneficiary = document.getElementById("user-beneficiary");
-// const resultsTransfer = document.getElementById("results-virement");
-// let soldBeneficiary = getRandom(1, 1000);
-
-const nameBeneficiary = document.getElementById("name-beneficiary")
-
-nameBeneficiary.addEventListener("keydown", (key) => {
-  // console.log(key.code);
-  // if (key.code === "Enter"){
-  //     alert("")
-  // }
-  key.code === "Enter" ? alert("a") : "";
-});
+import { AddUserBeneficiary } from "./components/addUserBeneficiary";
 
 
-const test = () => {
-  let user1 = new addUserClass(inputBeneficiary.value, );
-  console.log(user1);
-  
-}
-btnBeneficiary.addEventListener("click", test)
+import { userBeneficiary } from "./components/addUserBeneficiary";
 
+let btnDepot = document.getElementById("btn-depot");
+btnDepot.addEventListener("click", () => {
 
-
-
-
-
-
-// const addUser = () => {
-//   userBeneficiary.innerHTML = inputBeneficiary.value;
-//   userBeneficiary.classList.add("block");
-//   userBeneficiary.classList.remove("hidden");
-// };
-
-// btnBeneficiary.addEventListener("click", addUser);
-
-// const btnChooseUser = document.getElementById("btn-choose-user");
-
-// const showSold = () => {
-//   if (userBeneficiary.value = inputBeneficiary.value ) {
-//     resultsTransfer.innerHTML = soldBeneficiary
-//   }
-// };
-
-// btnChooseUser.addEventListener("click", showSold);
-
-
-
-//  
-
-
-
-
-
+    console.log(userBeneficiary.sold);
+})

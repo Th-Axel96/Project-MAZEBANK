@@ -1,8 +1,10 @@
 import getRandom from "./mathRandom";
+import classUser from "./classUser";
+import addUserClass from "./classUser";
+import { addUserBeneficiary } from "./addUserBeneficiary";
+import { userBeneficiary } from "./addUserBeneficiary";
 
 let currentSold = getRandom(1, 1000);
-let overDraft = -300;
-
 
 const resultsSold = document.getElementById("results-sold");
 let inputDepot = document.getElementById("input-depot");
@@ -73,15 +75,23 @@ btnTrade.addEventListener("click", withDraw);
 
 const inputVirement = document.getElementById("input-virement");
 const btnVirement = document.getElementById("btn-virement");
-const resultsVirement = document.getElementById("results-virement");
+const soldBeneficiaryResult = document.getElementById(
+  "sold-beneficiary-result"
+);
 
-let soldTransfer = getRandom(1, 999);
+// let btnDepot = document.getElementById("btn-depot");
+// btnDepot.addEventListener("click", () => {
+//   console.log(userBeneficiary.sold);
+// });
+let teste = userBeneficiary
+console.log(teste);
 
 const transfer = () => {
   let resultsInputVirement = parseInt(inputVirement.value);
+  let test = parseInt(userBeneficiary.soldBeneficiary);
   if (currentSold > 1) {
-    let total = (soldTransfer += resultsInputVirement);
-    resultsVirement.innerHTML = total;
+    let total = (test += resultsInputVirement);
+    soldBeneficiaryResult.innerHTML = total;
     let total2 = (currentSold -= resultsInputVirement);
     resultsSold.innerHTML = total2;
     decouvert.innerHTML = decouvertPositif;
@@ -95,6 +105,5 @@ const transfer = () => {
     warningIcon.classList.remove("hidden");
   }
 };
-// resultsVirement.innerHTML = soldTransfer;
 
 btnVirement.addEventListener("click", transfer);

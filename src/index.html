@@ -173,7 +173,8 @@
       <div class="flex items-center flex-col">
         <h1 class="pt-20 text-2xl pb-10">Veuillez ajouter un bénéficiaire :</h1>
         <div>
-          <input id="name-beneficiary"
+          <input
+            id="name-beneficiary"
             type="text"
             placeholder="Nom du bénéficiaire"
             class="placeholder:text-center"
@@ -181,6 +182,7 @@
         </div>
         <div>
           <input
+            id="account-beneficiary"
             type="text"
             placeholder="Numéro de compte"
             class="placeholder:text-center my-10"
@@ -188,6 +190,7 @@
         </div>
         <div>
           <input
+            id="sold-beneficiary"
             type="text"
             placeholder="solde"
             class="placeholder:text-center mb-4"
@@ -196,6 +199,15 @@
         <button id="btn-submit-beneficiary" class="border-2 border-black pt">
           Validé
         </button>
+        <div>
+          <span class="hidden text-green-500 text-2xl" id="account-succes"
+            >Bénéficiaire <span id="name-beneficiary-result"></span> ajouté avec
+            succés !</span
+          >
+          <span class="hidden text-red-500 text-2xl" id="account-notsucces"
+            >Veuillez ajouter un bénéficiaire !</span
+          >
+        </div>
       </div>
 
       <!-- done the beneficiary -->
@@ -283,22 +295,8 @@
     <div class="flex justify-center pt-8 text-xl">
       <h1 class="bg-yellow-400">
         Le solde de votre bénéficiaire est de
-        <span class="font-bold" id="results-virement"> </span> €
+        <span class="font-bold" id="sold-beneficiary-result"> </span> €
       </h1>
     </div>
-
-    <!-- add beneficiaire -->
-    <!-- <div>
-    <label for="beneficiaire">Ajouté un bénéficiaire</label>
-    <input type="text" class="border-2 border-black" id="input-beneficiary" />
-    <button id="btn-beneficiary" class="border-2 border-black">Ajouté</button>
-</div>
-<div>
-    <select name="user" id="user-select">
-      <option selected>Choisir un bénéficiaire</option>
-      <option id="user-beneficiary" class="hidden"></option>
-    </select>
-</div>
-    <button type="button" id="btn-choose-user" class="border-2 border-black">Validé</button> -->
   </body>
 </html>
