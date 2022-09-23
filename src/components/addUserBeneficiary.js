@@ -28,6 +28,7 @@ export const AddUserBeneficiary = () => {
     accountBeneficiary.value,
     soldBeneficiary.value
   );
+  soldBeneficiaryResult.innerHTML = soldBeneficiary.value;
   // if (
   //   (userBeneficiary =
   //     nameBeneficiary.value &&

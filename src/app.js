@@ -9,12 +9,10 @@ import { refreshFormulaire } from "./components/refreshForm";
 import { addFormulaire } from "./components/addForm";
 import addUserClass from "./components/classUser";
 import { AddUserBeneficiary } from "./components/addUserBeneficiary";
-
-
 import { userBeneficiary } from "./components/addUserBeneficiary";
 
-let btnDepot = document.getElementById("btn-depot");
-btnDepot.addEventListener("click", () => {
+// let btnDepot = document.getElementById("btn-depot");
+// btnDepot.addEventListener("click", () => {
 
-    console.log(userBeneficiary.sold);
-})
+//     console.log(userBeneficiary.sold);
+// })

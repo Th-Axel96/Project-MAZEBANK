@@ -79,18 +79,24 @@ const soldBeneficiaryResult = document.getElementById(
   "sold-beneficiary-result"
 );
 
+// btnVirement.addEventListener("click", () => {
+//   console.log(userBeneficiary.sold);
+// })
+
+
 // let btnDepot = document.getElementById("btn-depot");
 // btnDepot.addEventListener("click", () => {
 //   console.log(userBeneficiary.sold);
 // });
-let teste = userBeneficiary
-console.log(teste);
+// let teste = userBeneficiary
+// console.log(teste);
 
 const transfer = () => {
+  let test = parseInt(userBeneficiary.sold);
   let resultsInputVirement = parseInt(inputVirement.value);
-  let test = parseInt(userBeneficiary.soldBeneficiary);
+ 
   if (currentSold > 1) {
-    let total = (test += resultsInputVirement);
+    let total = (test += resultsInputVirement );
     soldBeneficiaryResult.innerHTML = total;
     let total2 = (currentSold -= resultsInputVirement);
     resultsSold.innerHTML = total2;
