@@ -6,297 +6,364 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="/output.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-yellow-100">
-    <div class="grid grid-cols-5 pt-4">
-      <div>
-        <button
-          class="text-4xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-          id="logo"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <ul
-          id="menu"
-          class="bg-yellow-200 w-40 h-80 flex flex-col justify-around items-center hidden"
-        >
-          <li class="border-b-4 pb-2"><a href="#">Home</a></li>
-
-          <li class="border-b-4 pb-2"><a href="#">Contact</a></li>
-          <li class="border-b-4 pb-2"><a href="#">Streaming</a></li>
-          <li class="border-b-4 pb-2"><a href="#">Boutique</a></li>
-        </ul>
-      </div>
-      <!-- profil -->
-      <div class="flex justify-center text-4xl pt-2 col-span-3">
-        <h1 class="bg-yellow-400 shadow-lg shadow-black">
-          Bienvenue chez MAZEBANK
-        </h1>
-      </div>
-      <div class="flex justify-center text-xl">
-        <p id="day-date"></p>
-      </div>
-    </div>
-
-    <!-- try JS -->
-
-    <h1 class="flex justify-center"><span id="welcome"></span></h1>
-
-    <!--**************** formulaire ************ -->
-
-    <div class="grid grid-cols-3">
-      <div class="pt-20 text-center">
-        <h1 class="text-2xl pb-5">Veuillez saisir vos données :</h1>
-        <!-- input name -->
-
-        <div>
-          <input
-            class="text-center"
-            type="text"
-            id="input-name"
-            placeholder="Votre Nom"
+  <body>
+    <header class="bg-yellow-600 h-48">
+      <div class="grid grid-cols-5 h-48">
+        <div class="flex justify-center items-center">
+          <img
+            src="./assets/img/icon-bank-red-$.png"
+            width="175px"
+            height="auto"
+            alt="bank-icon"
           />
         </div>
 
-        <!-- input account -->
-        <div class="pt-5">
-          <input
-            class="text-center"
-            type="text"
-            id="input-account"
-            placeholder="Votre Numéro de compte"
+        <div class="flex justify-center items-center text-4xl col-span-3 h-48">
+          <img
+            src="./assets/img/logo-mazebank.jfif"
+            width="50px"
+            height="auto"
+            alt="logo-mazebank"
           />
-        </div>
-
-        <!-- input  IBAN -->
-        <div class="pt-5">
-          <input
-            class="text-center"
-            type="text"
-            id="input-iban"
-            placeholder="Votre IBAN"
-          />
-        </div>
-
-        <!-- input  codebank -->
-        <div class="pt-5">
-          <input
-            class="text-center"
-            type="text"
-            id="input-codebank"
-            placeholder="Votre Code banque"
-          />
-        </div>
-        <!-- input  codeguichet -->
-
-        <div class="pt-5">
-          <input
-            class="text-center"
-            type="text"
-            id="input-codeguichet"
-            placeholder="Votre Code guichet"
-          />
-        </div>
-
-        <!-- input / btn Keyrib -->
-        <div class="pt-5">
-          <input
-            class="text-center"
-            type="text"
-            id="input-keyrib"
-            placeholder="Votre clé RIB"
-          />
-        </div>
-        <div class="pt-2">
-          <button
-            type="button"
-            class="border-2 border-black"
-            id="btn-formulaire"
+          <h1
+            class="text-6xl uppercase font-bold flex items-center border-b-8 border-red-600 pl-2"
           >
-            Valider
+            Maze <span class="text-red-600"> bank</span>
+          </h1>
+        </div>
+        <div class="flex justify-center items-center text-center text-4xl h-48">
+          <p id="day-date"></p>
+        </div>
+      </div>
+    </header>
+    <div class="bg-bg-gold bg-cover bg-center">
+      <div class="backdrop-blur">
+        <!-- try JS -->
+
+        <h1 class="flex justify-center"><span id="welcome"></span></h1>
+
+        <!--**************** formulaire ************ -->
+
+        <div class="grid grid-cols-2 pt-10">
+          <div class="pt-10 text-center">
+            <div class="mx-44 text-4xl">
+              <h1
+                class="text-4xl bg-yellow-600 border-b-8 border-red-500 mx-44 py-1 mb-4"
+              >
+                Veuillez saisir vos données :
+              </h1>
+
+              <!-- input name -->
+
+              <div class="py-4">
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-name"
+                  placeholder="Votre Nom"
+                />
+              </div>
+
+              <!-- input account -->
+              <div>
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-account"
+                  placeholder="Votre Numéro de compte"
+                />
+              </div>
+
+              <!-- input  IBAN -->
+              <div class="py-4">
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-iban"
+                  placeholder="Votre IBAN"
+                />
+              </div>
+
+              <!-- input  codebank -->
+              <div>
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-codebank"
+                  placeholder="Votre Code banque"
+                />
+              </div>
+              <!-- input  codeguichet -->
+
+              <div class="py-4">
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-codeguichet"
+                  placeholder="Votre Code guichet"
+                />
+              </div>
+
+              <!-- input / btn Keyrib -->
+              <div>
+                <input
+                  class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
+                  type="text"
+                  id="input-keyrib"
+                  placeholder="Votre clé RIB"
+                />
+              </div>
+              <div class="pt-8">
+                <button
+                  type="button"
+                  class="border-2 border-black rounded-lg bg-yellow-600 px-2 py-1"
+                  id="btn-formulaire"
+                >
+                  Valider
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table ID compte -->
+
+          <div class="flex flex-col items-center text-4xl pt-10">
+            <p
+              class="text-center px-2 mb-6 bg-yellow-600"
+              id="results-name"
+            ></p>
+            <table
+              class="border border-black shadow-lg shadow-black bg-yellow-600"
+            >
+              <tr class="border border-black">
+                <th class="p-2">Numéro de compte</th>
+                <td class="flex justify-center p-2">
+                  <span id="results-account">
+                    <span id="results-accountprofil">
+                      <p class="opacity-50" id="random-account"></p> </span
+                  ></span>
+                </td>
+              </tr>
+              <tr class="border border-black">
+                <th class="p-2">IBAN</th>
+                <td class="p-2">
+                  <span id="results-iban">
+                    <span class="opacity-50" id="random-iban"></span
+                  ></span>
+                </td>
+              </tr>
+              <tr class="border border-black">
+                <th class="p-2">Code banque</th>
+                <td class="flex justify-center p-2">
+                  <span id="results-codebank">
+                    <span class="opacity-50" id="random-codebank"></span
+                  ></span>
+                </td>
+              </tr>
+              <tr class="border border-black">
+                <th class="p-2">Code guichet</th>
+                <td class="flex justify-center p-2">
+                  <span id="results-codeguichet">
+                    <span class="opacity-50" id="random-codeguichet"></span
+                  ></span>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="p-2">Clé du RIB</th>
+                <td class="flex justify-center p-2">
+                  <span id="results-keyrib">
+                    <span class="opacity-50" id="random-keyrib"></span
+                  ></span>
+                </td>
+              </tr>
+            </table>
+            <div class="pt-8">
+              <button
+                type="button"
+                class="border-2 border-black rounded-lg bg-yellow-600 px-2 py-1"
+                id="btn-refresh"
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table done -->
+
+        <!-- Result solde-->
+
+        <div class="text-center">
+          <span id="warning-icon" class="hidden pb-4"
+            ><i class="fa-solid fa-circle-exclamation text-6xl text-red-500"></i
+          ></span>
+          <span class="bg-yellow-600 font-bold text-4xl" id="decouvert"></span>
+        </div>
+
+        <div class="flex justify-center py-20">
+          <p class="bg-yellow-600 px-2 py-1 text-4xl">
+            Votre solde est de
+            <span class="font-bold" id="results-sold"></span> €
+          </p>
+        </div>
+
+        <!-- Label, input for depot & retirer -->
+
+        <div class="flex justify-center text-4xl pb-20">
+          <label class="pr-4" for="depot"></label>
+          <input
+            id="input-depot"
+            type="text"
+            placeholder="Faire un dépôt"
+            class="border-b-8 border-green-600 placeholder:text-center placeholder:text-green-600 placeholder:text-2xl"
+          />
+          <button class="bg-green-600 px-2 mr-20" type="button" id="btn-depot">
+            Déposer
+          </button>
+
+          <!-- *********************************** -->
+
+          <label class="pl-10 pr-4" for="retirer"></label>
+          <input
+            type="text"
+            maxlength="3"
+            id="input-trade"
+            class="border-b-8 border-red-600 placeholder:text-center placeholder:text-red-600 placeholder:text-2xl"
+            placeholder="Retirer de l'argent"
+          />
+          <button class="bg-red-600 px-2" type="button" id="btn-trade">
+            Retirer
           </button>
         </div>
-      </div>
 
-      <!-- Table ID compte -->
+        <div class="border-b-8 border-red-600"></div>
 
-      <div class="flex justify-center items-center pt-20">
-        <table class="border border-black shadow-lg shadow-black">
-          <tr class="border border-black">
-            <th class="p-2">Numéro de compte</th>
-            <td class="flex justify-center p-2">
-              <span id="results-account">
-                <span id="results-accountprofil">
-                  <p class="opacity-50" id="random-account"></p> </span
-              ></span>
-            </td>
-          </tr>
-          <tr class="border border-black">
-            <th class="p-2">IBAN</th>
-            <td class="p-2">
-              <span id="results-iban">
-                <span class="opacity-50" id="random-iban"></span
-              ></span>
-            </td>
-          </tr>
-          <tr class="border border-black">
-            <th class="p-2">Code banque</th>
-            <td class="flex justify-center p-2">
-              <span id="results-codebank">
-                <span class="opacity-50" id="random-codebank"></span
-              ></span>
-            </td>
-          </tr>
-          <tr class="border border-black">
-            <th class="p-2">Code guichet</th>
-            <td class="flex justify-center p-2">
-              <span id="results-codeguichet">
-                <span class="opacity-50" id="random-codeguichet"></span
-              ></span>
-            </td>
-          </tr>
+        <!-- get the add beneficiary! -->
+        <div class="grid grid-cols-2">
+          <div class="flex items-center flex-col pt-20 text-4xl">
+            <h1 class="mb-8 bg-yellow-600 px-2 py-2 border-b-8 border-red-600">
+              Veuillez ajouter un bénéficiaire :
+            </h1>
+            <div class="flex justify-center">
+              <input
+                id="name-beneficiary"
+                type="text"
+                placeholder="Nom du bénéficiaire"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+              />
+            </div>
+            <div class="flex justify-center py-4">
+              <input
+                id="account-beneficiary"
+                type="text"
+                placeholder="Numéro de compte"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+              />
+            </div>
+            <div class="flex justify-center">
+              <input
+                id="sold-beneficiary"
+                type="text"
+                placeholder="solde"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+              />
+            </div>
+            <div class="flex justify-center pt-8">
+              <button
+                id="btn-submit-beneficiary"
+                class="border-2 border-black rounded-lg px-2 py-1 bg-yellow-600"
+              >
+                Valider
+              </button>
+            </div>
+            <div>
+              <!--  -->
+              <span class="hidden text-green-500 text-2xl" id="account-succes"
+                >Bénéficiaire <span id="name-beneficiary-result"></span> ajouté
+                avec succés !</span
+              >
+              <span class="hidden text-red-500 text-2xl" id="account-notsucces"
+                >Veuillez ajouter un bénéficiaire !</span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-center pt-20 text-4xl">
+              <h1
+                class="mb-8 bg-yellow-600 px-2 py-2 border-b-8 border-red-600"
+              >
+                Veuillez chosir un bénéficiaire :
+              </h1>
+            </div>
+            <div class="flex justify-center text-4xl">
+              <select name="users" id="users-select">
+                <option value="">--Choisir un utilisateur--</option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="flex justify-center text-4xl pt-8">
+              <button
+                id="btn-submit-beneficiary"
+                class="border-2 border-black rounded-lg px-2 py-1 bg-yellow-600"
+              >
+                Valider
+              </button>
+            </div>
+          </div>
+        </div>
 
-          <tr>
-            <th class="p-2">Clé du RIB</th>
-            <td class="flex justify-center p-2">
-              <span id="results-keyrib">
-                <span class="opacity-50" id="random-keyrib"></span
-              ></span>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- get the add beneficiary! -->
-
-      <div class="flex items-center flex-col">
-        <h1 class="pt-20 text-2xl pb-10">Veuillez ajouter un bénéficiaire :</h1>
-        <div>
+        <!-- Virement -->
+        <div class="flex justify-center pt-20 text-4xl">
+          <label for="virement" class="pr-4"></label>
           <input
-            id="name-beneficiary"
             type="text"
-            placeholder="Nom du bénéficiaire"
-            class="placeholder:text-center"
+            maxlength="3"
+            id="input-virement"
+            class="border-b-8 border-red-600 placeholder:text-center placeholder:text-2xl placeholder:text-red-600"
+            placeholder="Faire un virement"
           />
+          <button class="bg-red-600 k px-2" type="button" id="btn-virement">
+            virer
+          </button>
         </div>
-        <div>
-          <input
-            id="account-beneficiary"
-            type="text"
-            placeholder="Numéro de compte"
-            class="placeholder:text-center my-10"
-          />
-        </div>
-        <div>
-          <input
-            id="sold-beneficiary"
-            type="text"
-            placeholder="solde"
-            class="placeholder:text-center mb-4"
-          />
-        </div>
-        <button id="btn-submit-beneficiary" class="border-2 border-black pt">
-          Validé
-        </button>
-        <div>
-          <span class="hidden text-green-500 text-2xl" id="account-succes"
-            >Bénéficiaire <span id="name-beneficiary-result"></span> ajouté avec
-            succés !</span
-          >
-          <span class="hidden text-red-500 text-2xl" id="account-notsucces"
-            >Veuillez ajouter un bénéficiaire !</span
-          >
+        <div class="flex justify-center pt-8 text-4xl pb-20">
+          <h1 class="bg-yellow-600 px-2 py-1">
+            Le solde de votre bénéficiaire est de
+            <span class="font-bold" id="sold-beneficiary-result"></span> €
+          </h1>
         </div>
       </div>
-
-      <!-- done the beneficiary -->
-    </div>
-    <div class="text-center pb-8">
-      <button type="button" class="border-2 border-black" id="btn-refresh">
-        Refresh
-      </button>
+      <!-- get the done bg-blur -->
     </div>
 
-    <!-- Table done -->
+    <footer class="bg-yellow-600 grid grid-cols-3 h-40">
+      <div class="flex items-end pb-4 pl-4 text-3xl">
+        <i class="fa-regular fa-copyright"></i>
+        <p class="text-xl pl-2">2022 tout droit réservé</p>
+      </div>
+      <div class="text-6xl flex justify-center items-center">
+        <a href="#"><i class="fa-solid fa-link hover:text-red-600"></i></a>
 
-    <!-- Result solde-->
-    <p class="text-center" id="results-name"></p>
-
-    <div class="text-center py-6">
-      <span id="warning-icon" class="hidden pb-4"
-        ><i class="fa-solid fa-circle-exclamation text-6xl text-red-500"></i
-      ></span>
-      <span class="bg-yellow-400 font-bold text-xl" id="decouvert"></span>
-    </div>
-
-    <div class="flex justify-center py-10">
-      <p class="bg-yellow-400 text-xl">
-        Votre solde est de <span class="font-bold" id="results-sold"></span> €
-      </p>
-    </div>
-
-    <!-- Label, input for depot & retirer -->
-
-    <div class="flex justify-center">
-      <label class="pr-4" for="depot">Déposez de l'argent</label>
-      <input
-        id="input-depot"
-        type="text"
-        placeholder="Faire un dépôt"
-        class="border border-black text-center"
-      />
-      <button
-        class="bg-white border border-black px-2"
-        type="button"
-        id="btn-depot"
-      >
-        Déposer
-      </button>
-
-      <!-- *********************************** -->
-
-      <label class="pl-10 pr-4" for="retirer">Retirer de l'argent</label>
-      <input
-        type="text"
-        maxlength="3"
-        id="input-trade"
-        class="border border-black text-center"
-        placeholder="Retirer votre argent"
-      />
-      <button
-        class="bg-white border border-black px-2"
-        type="button"
-        id="btn-trade"
-      >
-        Retirer
-      </button>
-    </div>
-    <div id="root"></div>
-
-    <!-- Virement -->
-    <div class="flex justify-center pt-20">
-      <label for="virement" class="pr-4">Faire un virement</label>
-      <input
-        type="text"
-        maxlength="3"
-        id="input-virement"
-        class="border border-black text-center"
-        placeholder="Virement"
-      />
-      <button
-        class="bg-white border border-black px-2"
-        type="button"
-        id="btn-virement"
-      >
-        virer
-      </button>
-    </div>
-    <div class="flex justify-center pt-8 text-xl">
-      <h1 class="bg-yellow-400">
-        Le solde de votre bénéficiaire est de
-        <span class="font-bold" id="sold-beneficiary-result"> </span> €
-      </h1>
-    </div>
+        <a
+          class="px-8 hover:text-red-600"
+          href="https://github.com/Th-Axel96"
+          target="_blank"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+        <a
+          class="hover:text-red-600"
+          href="https://www.linkedin.com/in/axel-moussart-55103a251/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
   </body>
 </html>
