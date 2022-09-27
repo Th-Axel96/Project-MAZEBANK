@@ -83,7 +83,6 @@ const soldBeneficiaryResult = document.getElementById(
 //   console.log(userBeneficiary.sold);
 // })
 
-
 // let btnDepot = document.getElementById("btn-depot");
 // btnDepot.addEventListener("click", () => {
 //   console.log(userBeneficiary.sold);
@@ -94,22 +93,22 @@ const soldBeneficiaryResult = document.getElementById(
 const transfer = () => {
   let test = parseInt(userBeneficiary.sold);
   let resultsInputVirement = parseInt(inputVirement.value);
- 
-  if (currentSold > 1) {
-    let total = (test += resultsInputVirement );
+
+  // if (currentSold > 1) {
+    let total = (test += resultsInputVirement);
     soldBeneficiaryResult.innerHTML = total;
     let total2 = (currentSold -= resultsInputVirement);
     resultsSold.innerHTML = total2;
     decouvert.innerHTML = decouvertPositif;
     return total2;
-  } else currentSold < 1;
-  {
-    decouvert.innerHTML = decouvertNegatif;
-    body.classList.remove("bg-yellow-100");
-    body.classList.add("bg-red-100");
-    warningIcon.classList.add("block");
-    warningIcon.classList.remove("hidden");
-  }
+  // } else currentSold < 1;
+  // {
+  //   decouvert.innerHTML = decouvertNegatif;
+  //   body.classList.remove("bg-yellow-100");
+  //   body.classList.add("bg-red-100");
+  //   warningIcon.classList.add("block");
+  //   warningIcon.classList.remove("hidden");
+  // }
 };
 
 btnVirement.addEventListener("click", transfer);

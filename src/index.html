@@ -14,30 +14,31 @@
   </head>
   <body>
     <header class="bg-yellow-600 h-48">
-      <div class="grid grid-cols-5 h-48">
+      <div class="flex flex-col pt-2 lg:pt-0 lg:grid lg:grid-cols-5 lg:h-48">
         <div class="flex justify-center items-center">
           <img
             src="./assets/img/icon-bank-red-$.png"
-            width="175px"
+            class="w-20 lg:w-44"
             height="auto"
             alt="bank-icon"
           />
         </div>
-
-        <div class="flex justify-center items-center text-4xl col-span-3 h-48">
+        <div class="flex justify-center py-4 lg:py-0 lg:items-center lg:col-span-3 lg:h-48">
           <img
             src="./assets/img/logo-mazebank.jfif"
-            width="50px"
+            class="w-12"
             height="auto"
             alt="logo-mazebank"
           />
           <h1
-            class="text-6xl uppercase font-bold flex items-center border-b-8 border-red-600 pl-2"
+            class="lg:text-6xl text-4xl uppercase font-bold flex items-center border-b-8 border-red-600 pl-2"
           >
             Maze <span class="text-red-600"> bank</span>
           </h1>
         </div>
-        <div class="flex justify-center items-center text-center text-4xl h-48">
+        <div
+          class="flex justify-center items-center text-center lg:text-4xl text-2xl lg:h-48"
+        >
           <p id="day-date"></p>
         </div>
       </div>
@@ -50,18 +51,18 @@
 
         <!--**************** formulaire ************ -->
 
-        <div class="grid grid-cols-2 pt-10">
+        <div class="grid grid-rows-1 lg:grid-cols-2 pt-10">
           <div class="pt-10 text-center">
-            <div class="mx-44 text-4xl">
+            <div class="2xl:mx-44 lg:text-4xl text-3xl">
               <h1
-                class="text-4xl bg-yellow-600 border-b-8 border-red-500 mx-44 py-1 mb-4"
+                class="text-2xl lg:text-4xl bg-yellow-600 border-b-8 border-red-500 2xl:mx-44 mx-20 py-1 pt-2 mb-4"
               >
                 Veuillez saisir vos données :
               </h1>
 
               <!-- input name -->
 
-              <div class="py-4">
+              <div class="lg:py-4 py-8">
                 <input
                   class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
                   type="text"
@@ -81,7 +82,7 @@
               </div>
 
               <!-- input  IBAN -->
-              <div class="py-4">
+              <div class="lg:py-4 py-8">
                 <input
                   class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
                   type="text"
@@ -101,7 +102,7 @@
               </div>
               <!-- input  codeguichet -->
 
-              <div class="py-4">
+              <div class="lg:py-4 py-8">
                 <input
                   class="placeholder:text-center placeholder:text-2xl border-b-8 border-yellow-600"
                   type="text"
@@ -122,7 +123,7 @@
               <div class="pt-8">
                 <button
                   type="button"
-                  class="border-2 border-black rounded-lg bg-yellow-600 px-2 py-1"
+                  class="text-3xl border-2 border-black rounded-lg bg-yellow-600 px-2 py-1 pt-2"
                   id="btn-formulaire"
                 >
                   Valider
@@ -133,7 +134,7 @@
 
           <!-- Table ID compte -->
 
-          <div class="flex flex-col items-center text-4xl pt-10">
+          <div class="flex flex-col items-center lg:text-4xl text-3xl pt-10">
             <p
               class="text-center px-2 mb-6 bg-yellow-600"
               id="results-name"
@@ -187,7 +188,7 @@
             <div class="pt-8">
               <button
                 type="button"
-                class="border-2 border-black rounded-lg bg-yellow-600 px-2 py-1"
+                class="lg:text-4xl text-3xl border-2 border-black rounded-lg bg-yellow-600 px-2 py-1 pt-2"
                 id="btn-refresh"
               >
                 Refresh
@@ -208,7 +209,7 @@
         </div>
 
         <div class="flex justify-center py-20">
-          <p class="bg-yellow-600 px-2 py-1 text-4xl">
+          <p class="bg-yellow-600 px-2 py-2 lg:text-4xl text-2xl">
             Votre solde est de
             <span class="font-bold" id="results-sold"></span> €
           </p>
@@ -216,39 +217,53 @@
 
         <!-- Label, input for depot & retirer -->
 
-        <div class="flex justify-center text-4xl pb-20">
-          <label class="pr-4" for="depot"></label>
-          <input
-            id="input-depot"
-            type="text"
-            placeholder="Faire un dépôt"
-            class="border-b-8 border-green-600 placeholder:text-center placeholder:text-green-600 placeholder:text-2xl"
-          />
-          <button class="bg-green-600 px-2 mr-20" type="button" id="btn-depot">
-            Déposer
-          </button>
+        <div
+          class="lg:flex lg:justify-center grid grid-rows-2 lg:text-4xl text-3xl pb-20"
+        >
+
+          <div class="flex justify-center pb-8 lg:pb-0">
+            <label class="pr-0 lg:pr-4" for="depot"></label>
+            <input
+              id="input-depot"
+              type="text"
+              placeholder="Faire un dépôt"
+              class="border-b-8 border-green-600 placeholder:text-center placeholder:text-green-600 placeholder:text-2xl"
+            />
+            <button
+              class="bg-green-600 px-2 mr-0 lg:mr-20"
+              type="button"
+              id="btn-depot"
+            >
+              Déposer
+            </button>
+          </div>
 
           <!-- *********************************** -->
 
-          <label class="pl-10 pr-4" for="retirer"></label>
-          <input
-            type="text"
-            maxlength="3"
-            id="input-trade"
-            class="border-b-8 border-red-600 placeholder:text-center placeholder:text-red-600 placeholder:text-2xl"
-            placeholder="Retirer de l'argent"
-          />
-          <button class="bg-red-600 px-2" type="button" id="btn-trade">
-            Retirer
-          </button>
+          <div class="flex justify-center pb-8 lg:pb-0">
+            <label class="pr-0 pl-0 lg:pr-4 lg:pl-10" for="retirer"></label>
+            <input
+              type="text"
+              maxlength="3"
+              id="input-trade"
+              class="border-b-8 border-red-600 placeholder:text-center placeholder:text-red-600 placeholder:text-2xl"
+              placeholder="Retirer de l'argent"
+            />
+            <button class="bg-red-600 px-2" type="button" id="btn-trade">
+              Retirer
+            </button>
+          </div>
         </div>
 
         <div class="border-b-8 border-red-600"></div>
 
         <!-- get the add beneficiary! -->
-        <div class="grid grid-cols-2">
-          <div class="flex items-center flex-col pt-20 text-4xl">
-            <h1 class="mb-8 bg-yellow-600 px-2 py-2 border-b-8 border-red-600">
+
+        <div class="grid grid-rows-1 lg:grid-cols-2">
+          <div class="flex items-center flex-col pt-20 lg:text-4xl">
+            <h1
+              class="mb-8 bg-yellow-600 px-2 py-2 pt-3 border-b-8 border-red-600 lg:text-4xl text-2xl"
+            >
               Veuillez ajouter un bénéficiaire :
             </h1>
             <div class="flex justify-center">
@@ -256,15 +271,15 @@
                 id="name-beneficiary"
                 type="text"
                 placeholder="Nom du bénéficiaire"
-                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl text-3xl lg:text-4xl"
               />
             </div>
-            <div class="flex justify-center py-4">
+            <div class="flex justify-center lg:py-4 py-8">
               <input
                 id="account-beneficiary"
                 type="text"
                 placeholder="Numéro de compte"
-                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl text-3xl lg:text-4xl"
               />
             </div>
             <div class="flex justify-center">
@@ -272,19 +287,18 @@
                 id="sold-beneficiary"
                 type="text"
                 placeholder="solde"
-                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl"
+                class="placeholder:text-center border-b-8 border-yellow-600 placeholder:text-2xl text-3xl lg:text-4xl"
               />
             </div>
             <div class="flex justify-center pt-8">
               <button
                 id="btn-submit-beneficiary"
-                class="border-2 border-black rounded-lg px-2 py-1 bg-yellow-600"
+                class="border-2 border-black rounded-lg px-2 py-1 bg-yellow-600 text-3xl"
               >
                 Valider
               </button>
             </div>
             <div>
-              <!--  -->
               <span class="hidden text-green-500 text-2xl" id="account-succes"
                 >Bénéficiaire <span id="name-beneficiary-result"></span> ajouté
                 avec succés !</span
@@ -295,20 +309,23 @@
             </div>
           </div>
           <div>
-            <div class="flex justify-center pt-20 text-4xl">
+            <div class="flex justify-center pt-20 lg:text-4xl text-2xl">
               <h1
-                class="mb-8 bg-yellow-600 px-2 py-2 border-b-8 border-red-600"
+                class="mb-8 bg-yellow-600 px-2 py-2 pt-3 border-b-8 border-red-600"
               >
                 Veuillez chosir un bénéficiaire :
               </h1>
             </div>
-            <div class="flex justify-center text-4xl">
+
+            <!-- get the select for users -->
+
+            <div class="flex justify-center lg:text-4xl text-2xl">
               <select name="users" id="users-select">
                 <option value="">--Choisir un utilisateur--</option>
                 <option value=""></option>
               </select>
             </div>
-            <div class="flex justify-center text-4xl pt-8">
+            <div class="flex justify-center lg:text-4xl text-3xl pt-8">
               <button
                 id="btn-submit-beneficiary"
                 class="border-2 border-black rounded-lg px-2 py-1 bg-yellow-600"
@@ -320,7 +337,8 @@
         </div>
 
         <!-- Virement -->
-        <div class="flex justify-center pt-20 text-4xl">
+
+        <div class="flex justify-center py-14 lg:text-4xl text-3xl">
           <label for="virement" class="pr-4"></label>
           <input
             type="text"
@@ -333,22 +351,23 @@
             virer
           </button>
         </div>
-        <div class="flex justify-center pt-8 text-4xl pb-20">
-          <h1 class="bg-yellow-600 px-2 py-1">
+        <div class="flex justify-center lg:text-4xl text-2xl pb-14">
+          <h1 class="bg-yellow-600 px-2 py-2">
             Le solde de votre bénéficiaire est de
             <span class="font-bold" id="sold-beneficiary-result"></span> €
           </h1>
         </div>
       </div>
+
       <!-- get the done bg-blur -->
     </div>
 
     <footer class="bg-yellow-600 grid grid-cols-3 h-40">
-      <div class="flex items-end pb-4 pl-4 text-3xl">
+      <div class="flex items-end pb-4 pl-4 lg:text-3xl">
         <i class="fa-regular fa-copyright"></i>
-        <p class="text-xl pl-2">2022 tout droit réservé</p>
+        <p class="lg:text-xl text-xs pl-2">2022 tout droit réservé</p>
       </div>
-      <div class="text-6xl flex justify-center items-center">
+      <div class="lg:text-6xl text-4xl flex justify-center items-center">
         <a href="#"><i class="fa-solid fa-link hover:text-red-600"></i></a>
 
         <a
