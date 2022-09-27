@@ -5,8 +5,12 @@
   "main": "/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "run-p start:**",
+    "start:tailwind": "npx tailwindcss -i ./src/assets/css/styles.css -o ./dist/assets/css/output.css --watch",
+    "start:serve": "webpack serve --open --config webpack.dev.js",
+    "build": "run-s build:**",
+    "build:webpack": "webpack --config webpack.prod.js",
+    "build:tailwind": "npx tailwindcss -i ./src/assets/css/styles.css -o ./dist/assets/css/output.css"
   },
   "keywords": [],
   "author": "mrp-171",
