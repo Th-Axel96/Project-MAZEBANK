@@ -1,23 +1,21 @@
+import "@fortawesome/fontawesome-free/js/all";
 import "./assets/css/styles.css";
-// import _ from "lodash";
-// import Icon from './assets/img/img-test-webpack.jpg';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+import getRandom from "./components/mathRandom";
+// import menuBurger from "./components/menuBurger";
+import showDate from "./components/dailyDate";
+import { addMoney } from "./components/calculate";
+import { withDraw } from "./components/calculate";
+import { refreshFormulaire } from "./components/refreshForm";
+import { addFormulaire } from "./components/addForm";
+import addUserClass from "./components/classUser";
+import { AddUserBeneficiary } from "./components/addUserBeneficiary";
+import { userBeneficiary } from "./components/addUserBeneficiary";
 
-// function component() {
-//   const element = document.createElement('div');
+// let btnDepot = document.getElementById("btn-depot");
+// btnDepot.addEventListener("click", () => {
 
-//   // Lodash, currently included via a script, is required for this line to work
-//   element.innerHTML = _.join(['', ''], ' ');
-//   element.classList.add("text-3xl");
-
-//   const myIcon = new Image();
-//   myIcon.src = Icon;
-
-//   element.appendChild(myIcon);
-
-//   return element;
-// }
-
-// document.body.appendChild(component());
-
-
-console.log("Hello JS");
+//     console.log(userBeneficiary.sold);
+// })
