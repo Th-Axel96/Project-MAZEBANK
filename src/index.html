@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MazeBank</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo-mazebank.jfif">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/logo-mazebank.jfif"
+    />
     <link href="./assets/css/output.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <!-- aos animate  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header class="bg-yellow-600 h-40">
-      <div class="flex flex-col pt-2 lg:pt-0 ">
-        <div class="flex justify-center items-center">
-          
-        </div>
-        <div class="flex justify-center py-4 ">
+      <div class="flex flex-col pt-2 lg:pt-0">
+        <div class="flex justify-center items-center"></div>
+        <div
+          data-aos="flip-up"
+          data-aos-delay="50"
+          data-aos-duration="3000"
+          class="flex justify-center py-4"
+        >
           <img
             src="./assets/img/logo-mazebank.jfif"
             class="w-12"
@@ -28,11 +37,13 @@
           <h1
             class="lg:text-6xl text-4xl uppercase font-bold flex items-center border-b-8 border-red-600 pl-2"
           >
-            Maze <span class="text-red-600"></span>
+            Maze <span class="text-red-600">bank</span>
           </h1>
         </div>
-        <div
-          class="flex justify-center items-center text-center lg:text-4xl text-2xl "
+        <div data-aos="slide-up"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+          class="flex justify-center items-center text-center lg:text-4xl text-2xl"
         >
           <p id="day-date"></p>
         </div>
@@ -47,7 +58,12 @@
         <!--**************** formulaire ************ -->
 
         <div class="grid grid-rows-1 lg:grid-cols-2 pt-10">
-          <div class="pt-10 text-center">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+            class="pt-10 text-center"
+          >
             <div class="2xl:mx-44 lg:text-4xl text-3xl">
               <h1
                 class="text-2xl lg:text-4xl bg-yellow-600 border-b-8 border-red-500 2xl:mx-44 mx-20 py-1 pt-2 mb-4"
@@ -129,7 +145,12 @@
 
           <!-- Table ID compte -->
 
-          <div class="flex flex-col items-center lg:text-4xl text-3xl pt-10">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+            class="flex flex-col items-center lg:text-4xl text-3xl pt-10"
+          >
             <p
               class="text-center px-2 mb-6 bg-yellow-600"
               id="results-name"
@@ -203,7 +224,12 @@
           <span class="bg-yellow-600 font-bold text-4xl" id="decouvert"></span>
         </div>
 
-        <div class="flex justify-center py-20">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="50"
+          data-aos-duration="3000"
+          class="flex justify-center py-20"
+        >
           <p class="bg-yellow-600 px-2 py-2 lg:text-4xl text-2xl">
             Votre solde est de
             <span class="font-bold" id="results-sold"></span> €
@@ -215,8 +241,12 @@
         <div
           class="lg:flex lg:justify-center grid grid-rows-2 lg:text-4xl text-3xl pb-20"
         >
-
-          <div class="flex justify-center pb-8 lg:pb-0">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+            class="flex justify-center pb-8 lg:pb-0"
+          >
             <label class="pr-0 lg:pr-4" for="depot"></label>
             <input
               id="input-depot"
@@ -235,7 +265,12 @@
 
           <!-- *********************************** -->
 
-          <div class="flex justify-center pb-8 lg:pb-0">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+            class="flex justify-center pb-8 lg:pb-0"
+          >
             <label class="pr-0 pl-0 lg:pr-4 lg:pl-10" for="retirer"></label>
             <input
               type="text"
@@ -255,7 +290,12 @@
         <!-- get the add beneficiary! -->
 
         <div class="grid grid-rows-1 lg:grid-cols-2">
-          <div class="flex items-center flex-col pt-20 lg:text-4xl">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+            class="flex items-center flex-col pt-20 lg:text-4xl"
+          >
             <h1
               class="mb-8 bg-yellow-600 px-2 py-2 pt-3 border-b-8 border-red-600 lg:text-4xl text-2xl"
             >
@@ -303,7 +343,11 @@
               >
             </div>
           </div>
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="3000"
+          >
             <div class="flex justify-center pt-20 lg:text-4xl text-2xl">
               <h1
                 class="mb-8 bg-yellow-600 px-2 py-2 pt-3 border-b-8 border-red-600"
@@ -333,7 +377,12 @@
 
         <!-- Virement -->
 
-        <div class="flex justify-center py-14 lg:text-4xl text-3xl">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="50"
+          data-aos-duration="3000"
+          class="flex justify-center py-14 lg:text-4xl text-3xl"
+        >
           <label for="virement" class="pr-4"></label>
           <input
             type="text"
@@ -346,7 +395,12 @@
             virer
           </button>
         </div>
-        <div class="flex justify-center lg:text-4xl text-2xl pb-14">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="3000"
+          class="flex justify-center lg:text-4xl text-2xl pb-14"
+        >
           <h1 class="bg-yellow-600 px-2 py-2">
             Le solde de votre bénéficiaire est de
             <span class="font-bold" id="sold-beneficiary-result"></span> €
@@ -381,5 +435,10 @@
         ></a>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
